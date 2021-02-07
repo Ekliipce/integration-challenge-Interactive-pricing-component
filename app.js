@@ -42,9 +42,13 @@ determine()
 slidebar.addEventListener('mousemove', function(){
     determine()
 })
+slidebar.addEventListener('touchmove', function(){
+    determine()
+}
 discount.addEventListener('click', function(){
     determine()
 })
+
 
 if(window.innerWidth < 480){
     let text_discount = document.getElementById('discount')
