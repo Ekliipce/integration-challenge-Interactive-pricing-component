@@ -44,7 +44,7 @@ slidebar.addEventListener('mousemove', function(){
 })
 slidebar.addEventListener('touchmove', function(){
     determine()
-}
+})
 discount.addEventListener('click', function(){
     determine()
 })
