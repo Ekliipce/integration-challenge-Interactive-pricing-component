@@ -4,10 +4,9 @@ let price = document.getElementById('number-price')
 let array_pageviews = [10, 50, 100, 500, 1]
 
 let discount = document.getElementById('checkbox-discount')
-
-slidebar.addEventListener('change',function(){
+let determine = function(){
+    array_pageviews = [10, 50, 100, 500, 1]
     if(discount.checked){
-        array_pageviews = [10, 50, 100, 500, 1]
         for(var i = 0; i < array_pageviews.length; i++){
             array_pageviews[i] -= array_pageviews[i] * 0.25;
         }
@@ -37,7 +36,15 @@ slidebar.addEventListener('change',function(){
             price.innerText = "$36.00"
             break;
     }
-});
+}
+determine()
+
+slidebar.addEventListener('mousemove', function(){
+    determine()
+})
+discount.addEventListener('click', function(){
+    determine()
+})
 
 if(window.innerWidth < 480){
     let text_discount = document.getElementById('discount')

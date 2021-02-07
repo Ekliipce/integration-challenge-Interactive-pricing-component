@@ -19,7 +19,8 @@ html, body{
 }body{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
     font-size: 15px;
     font-family: 'Manrope', sans-serif;
     font-weight: 600;
@@ -85,6 +86,7 @@ form{
     width: 85%;
     height: auto;
     min-width: 350px;
+    margin-bottom: 40px;
     background: var(--white);
     border-radius: 3px;
     display: flex;
@@ -129,7 +131,32 @@ form{
     border-bottom-right-radius: 20px;
 }
 /*button*/
-#price-value::-moz-range-thumb {
+#price-value::-moz-range-thumb{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    border-color: var(--strong_cyan);
+    background: no-repeat url('images/icon-slider.svg');
+    background-position: center; 
+    background-color: var(--strong_cyan);
+    background-size: 70%;
+    box-shadow: 0 0 10px 3px var(--soft_cyan);
+  }#price-value::-webkit-slider-thumb {
+    -webkit-appearance: none;               
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: translateY(-5px); 
+    border-radius: 100%;
+    border-color: var(--strong_cyan);
+    background: no-repeat url('images/icon-slider.svg');
+    background-position: center; 
+    background-color: var(--strong_cyan);
+    background-size: 70%;
+    box-shadow: 0 0 10px 3px var(--soft_cyan);
+  }#price-value::-ms-thumb{
+    -webkit-appearance: none;               
+    border: none;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 100%;
@@ -146,7 +173,18 @@ form{
     background-color: var(--soft_cyan);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+}#price-value::-webkit-slider-runnable-track{
+    height: 0.5rem;
+    background-color: var(--soft_cyan);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}#price-value::-ms-fill-lower {
+    height: 0.5rem;
+    background-color: var(--soft_cyan);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
+
 @media (max-width:480px){
     #head-pricing{
         justify-content: center;
@@ -263,4 +301,17 @@ form{
     margin-top: 40px;
 }.m-auto{
     margin: auto;
+}
+
+.attribution{
+    padding: 10px;
+    color: var(--grayish_blue);
+    text-align: center;
+    font-size: 9px;
+    bottom: 0;
+    position: relative;
+    align-self: center; 
+}.attribution a{
+    text-decoration: none;
+    color: var(--grayish_blue);
 }
